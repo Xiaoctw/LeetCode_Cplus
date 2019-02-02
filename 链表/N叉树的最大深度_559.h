@@ -23,7 +23,7 @@ public:
     Node(int val,  vector<Node *> &children) : val(val), children(children) {}
 };
 
-class N叉树的最大深度_559 {
+class leetcode_559 {
 public:
     int maxDepth(Node* root) {
         if (root==nullptr){

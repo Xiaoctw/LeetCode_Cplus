@@ -14,7 +14,10 @@ struct ListNode {
 
     explicit ListNode(int x) : val(x), next(nullptr) {}
      };
-class 移除链表元素_27 {
+/**
+ * 移除链表元素
+ */
+class leetcode_27 {
     ListNode* removeElements(ListNode* head, int val) {
         auto * newHead=new ListNode(0);
         newHead->next=head;

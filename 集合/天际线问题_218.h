@@ -10,7 +10,7 @@
 #include <set>
 
 using namespace std;
-class 天际线问题_218 {
+class leetcode_218 {
 public:
     vector<pair<int, int>> getSkyline(vector<vector<int>>& buildings) {
         if (buildings.empty()){
