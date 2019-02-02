@@ -2,8 +2,13 @@
 #include <malloc.h>
 #include <cstdio>
 #include <map>
+#include <cstdlib>
+#include <cstdio>
 #include <hash_map>
 #include <unordered_map>
+#include <random>
+#include <algorithm>
+#define N 40
 using namespace std;
 
 /**
@@ -45,5 +50,34 @@ int main() {
     cout<<pair1->second<<endl;
     cout<<"---------------------------"<<endl<<"lamdba表达式操作";
     cout<<[](double f){ return std::abs(f);}(-4.3);
+    vector<int> a;
+    a.push_back(1);
+    a.push_back(3);
+    a.push_back(4);
+    a.push_back(-3);
+    a.push_back(-12);
+    a.push_back(2);
+    a.push_back(3);
+    a.push_back(-5);
+    int A[N];
+    for (int &i : A) {
+        i =rand()%100-50;
+    }
+
+    sort(A,A+20);//排序前20个元素
+    for (int j = 0; j < 20; ++j) {
+        cout<<A[j]<<" ";
+    }
+    cout<<"\n----------"<<endl;
+    sort(A,A+20,[](int a,int b)-> bool {
+        return abs(a)<abs(b);
+    });
+    for (int j = 0; j < 20; ++j) {
+        cout<<A[j]<<" ";
+    }
+    cout<<"\n----------"<<endl;
+    for (int j = 20; j < N; ++j) {
+        cout<<A[j]<<" ";
+    }
     return 0;
 }

@@ -15,10 +15,10 @@ using namespace std;
 
 class Node{
 public:
-    int val;
+    int val{};
     vector<Node*> children;
 
-    Node(){}
+    Node() = default;
 
     Node(int val,  vector<Node *> &children) : val(val), children(children) {}
 };
