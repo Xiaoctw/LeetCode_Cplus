@@ -11,7 +11,7 @@ public:
     Node* next;
     Node* child;
 
-    Node() {}
+    Node()  {}
 
     Node(int val, Node *prev, Node *next, Node *child) : val(val), prev(prev), next(next), child(child) {}
 };

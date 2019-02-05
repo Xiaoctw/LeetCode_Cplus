@@ -82,6 +82,6 @@ int main() {
     return 0;
 }
 
-void test(){
+    void test() {
 
 }

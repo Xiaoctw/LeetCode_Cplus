@@ -16,7 +16,7 @@ using namespace std;
 class Node{
 public:
     int val{};
-    vector<Node*> children;
+    vector<Node*> children;//注意这里一定标上指针符号
 
     Node() = default;
 

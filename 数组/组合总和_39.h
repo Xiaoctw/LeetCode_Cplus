@@ -14,7 +14,7 @@ public:
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
         sort(candidates.begin(),candidates.end());
         vector<vector<int >> lists;
-        findList(lists,vector<int>(),candidates,target,0);
+        findList(lists,vector<int>(),candidates,target,0);//这里不能传入nullptr,在子程序运行过程中会报错
         return lists;
     }
     void findList(vector<vector<int >> &lists,vector<int> list,vector<int > nums,int target,int index){
@@ -22,10 +22,10 @@ public:
             return;
         }
         if (target==0){
-            vector<int > &temp(list);
+            const vector<int > &temp(list);
             lists.push_back(temp);
         }
-        for (int i = index; i <lists.size()&&nums[i]<=target ; ++i) {
+        for (int i = index; i <nums.size()&&nums[i]<=target ; ++i) {
             vector<int> temp(list);
             temp.push_back(nums[i]);
             findList(lists,temp,nums,target-nums[i],i);
