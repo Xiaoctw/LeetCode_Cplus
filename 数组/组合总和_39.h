@@ -12,7 +12,7 @@ using namespace std;
 class leetcode_39 {
 public:
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-        sort(candidates.begin(),candidates.end());
+        sort(candidates.begin(),candidates.end());//数组还是向量都可以进行排序
         vector<vector<int >> lists;
         findList(lists,vector<int>(),candidates,target,0);//这里不能传入nullptr,在子程序运行过程中会报错
         return lists;

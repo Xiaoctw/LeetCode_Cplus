@@ -69,7 +69,7 @@ int main() {
         cout<<A[j]<<" ";
     }
     cout<<"\n----------"<<endl;
-    sort(A,A+20,[](int a,int b)-> bool {
+    sort(A,A+20,[](int a,int b)-> bool {//注意要加上返回值
         return abs(a)<abs(b);
     });
     for (int j = 0; j < 20; ++j) {
@@ -79,9 +79,14 @@ int main() {
     for (int j = 20; j < N; ++j) {
         cout<<A[j]<<" ";
     }
+    cout<<"\n------------------"<<endl;
+    vector<vector<int>> vector1(5,vector<int >(5,0));
+    for(const auto &vector:vector1){
+        for (int i : vector) {
+            cout<< i <<" ";
+        }
+        cout<<endl;
+    }
     return 0;
 }
 
-    void test() {
-
-}
